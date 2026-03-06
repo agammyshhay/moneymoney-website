@@ -362,6 +362,34 @@ body {
   text-decoration: underline;
 }
 
+/* ---- How Callout ---- */
+
+.how-callout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 100px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.how-callout i {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 768px) {
+  .how-callout {
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    text-align: start;
+  }
+}
+
 /* ---- Security Section ---- */
 
 .security-section {
