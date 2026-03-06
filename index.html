@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoneyMoney — הדרך הקלה לעקוב אחרי הכסף שלך</title>
-  <meta name="description" content="MoneyMoney אוסף אוטומטית את כל העו״ש מהבנקים וכרטיסי האשראי שלך למקום אחד. חינם ובקוד פתוח.">
+  <meta name="description" content="MoneyMoney אוסף אוטומטית את כל העו״ש מהבנקים וכרטיסי האשראי שלך למקום אחד. חינם ובקוד פתוח. בנוי על כספיון.">
   <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Bootstrap 5 RTL -->
@@ -35,7 +35,7 @@
           <i class="bi bi-github"></i>
           <span class="d-none d-sm-inline">GitHub</span>
         </a>
-        <a href="https://github.com/agammyshhay/moneymoney/releases/latest" class="btn btn-primary btn-sm rounded-pill px-3">
+        <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.0.13/MoneyMoney-Setup-1.0.13.exe" class="btn btn-primary btn-sm rounded-pill px-3">
           <i class="bi bi-download ms-1"></i>
           הורדה
         </a>
@@ -54,10 +54,10 @@
             <span class="text-gradient">מקום אחד.</span>
           </h1>
           <p class="hero-subtitle">
-            MoneyMoney אוסף אוטומטית את כל העו״ש מהבנקים וכרטיסי האשראי שלך, מייצא לקובץ JSON ומסנכרן לאפליקציית MoneyMoney — בחינם ובקוד פתוח.
+            MoneyMoney אוסף אוטומטית את כל העו״ש מהבנקים וכרטיסי האשראי שלך, מסדר הכל לפי קטגוריות, ונותן לך תמונה ברורה על מצב הכסף — בחינם ובקוד פתוח.
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="https://github.com/agammyshhay/moneymoney/releases/latest" class="btn btn-primary btn-lg rounded-pill px-4">
+            <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.0.13/MoneyMoney-Setup-1.0.13.exe" class="btn btn-primary btn-lg rounded-pill px-4">
               <i class="bi bi-windows ms-2"></i>
               הורדה ל-Windows
             </a>
@@ -68,12 +68,12 @@
           </div>
           <p class="hero-note mt-3">
             <i class="bi bi-shield-check ms-1"></i>
-            חינם לגמרי. קוד פתוח. הנתונים נשארים אצלך.
+            חינם לגמרי. קוד פתוח. הסיסמאות נשארות רק אצלך.
           </p>
         </div>
         <div class="col-lg-6 text-center">
           <div class="hero-image-wrapper">
-            <img src="images/screenshot.png" alt="צילום מסך של MoneyMoney" class="hero-image" onerror="this.parentElement.innerHTML='<div class=screenshot-placeholder><i class=&quot;bi bi-laptop&quot;></i><p>צילום מסך בקרוב</p></div>'">
+            <img src="images/screenshot-overview.png" alt="סקירה כללית של MoneyMoney — הכנסות, הוצאות ומאזן חודשי" class="hero-image">
           </div>
         </div>
       </div>
@@ -83,7 +83,8 @@
   <!-- Features -->
   <section class="features-section" id="features">
     <div class="container">
-      <h2 class="section-title text-center mb-5">למה MoneyMoney?</h2>
+      <h2 class="section-title text-center mb-2">מה MoneyMoney יודע לעשות?</h2>
+      <p class="section-subtitle text-center mb-5">כל הכלים שצריך כדי לנהל את הכסף בקלות</p>
       <div class="row g-4">
 
         <div class="col-md-6 col-lg-3">
@@ -92,17 +93,17 @@
               <i class="bi bi-bank"></i>
             </div>
             <h3>כל הבנקים והאשראי</h3>
-            <p>תמיכה בכל הבנקים וחברות האשראי הגדולות בישראל — לאומי, הפועלים, דיסקונט, מזרחי, ויזה כאל, מקס ועוד.</p>
+            <p>מחברים פעם אחת את הבנקים וכרטיסי האשראי — והאפליקציה עושה את השאר. אוספת הכל ברקע, בלי מאמץ.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="feature-card">
             <div class="feature-icon">
-              <i class="bi bi-arrow-repeat"></i>
+              <i class="bi bi-tags"></i>
             </div>
-            <h3>איסוף אוטומטי</h3>
-            <p>MoneyMoney מושך את כל העו״ש באופן אוטומטי — אפשר להגדיר ריצה אוטומטית בהפעלת המחשב, בלי מאמץ.</p>
+            <h3>קטגוריות אוטומטיות</h3>
+            <p>כל תנועה מקבלת קטגוריה: אוכל, דלק, בילויים ועוד. הגדירו מיפויים — והאפליקציה תסווג לבד תנועות חדשות בעתיד.</p>
           </div>
         </div>
 
@@ -111,21 +112,92 @@
             <div class="feature-icon">
               <i class="bi bi-shield-lock"></i>
             </div>
-            <h3>פרטי ומאובטח</h3>
-            <p>הנתונים נשמרים רק על המחשב שלך. הסיסמאות מוצפנות באמצעות מערכת ההפעלה. שום דבר לא נשלח לשרתים חיצוניים.</p>
+            <h3>הסיסמאות שלכם בטוחות</h3>
+            <p>סיסמאות הבנק נשמרות ומוצפנות על המחשב שלכם בלבד — הן לעולם לא עוזבות אותו ואף אחד חוץ מכם לא יכול לגשת אליהן.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="feature-card">
             <div class="feature-icon">
-              <i class="bi bi-filetype-json"></i>
+              <i class="bi bi-people"></i>
             </div>
-            <h3>ייצוא חכם</h3>
-            <p>ייצוא אוטומטי לקובץ JSON עם סנכרון לאפליקציית MoneyMoney — כל העו״ש מכל החשבונות במקום אחד.</p>
+            <h3>תקציב משפחתי</h3>
+            <p>הזמינו בן/בת זוג או בני משפחה. כל התנועות מתאחדות לתמונה אחת — כך כולם רואים את אותו דבר ומקבלים החלטות ביחד.</p>
           </div>
         </div>
 
+      </div>
+
+      <div class="row g-4 mt-1">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon feature-icon--purple">
+              <i class="bi bi-stars"></i>
+            </div>
+            <h3>הסיפור של הכסף שלך</h3>
+            <p>סיכום חודשי חכם שמספר לכם בדיוק כמה נשאר, כמה אפשר להוציא ביום, וכמה חסכתם — הכל במילים פשוטות.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon feature-icon--green">
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <h3>יעד חיסכון חודשי</h3>
+            <p>הגדירו יעד חיסכון ועקבו אחרי ההתקדמות שלכם במהלך החודש. תדעו בדיוק כמה אתם צריכים לחסוך ואיפה אתם עומדים.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon feature-icon--orange">
+              <i class="bi bi-credit-card-2-back"></i>
+            </div>
+            <h3>מעקב מנויים</h3>
+            <p>צפו בכל המנויים שאתם משלמים עליהם כל חודש — נטפליקס, ביטוחים, אינטרנט ועוד. תדעו בדיוק לאן הכסף הולך.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon feature-icon--teal">
+              <i class="bi bi-envelope-paper"></i>
+            </div>
+            <h3>סיכום שבועי למייל</h3>
+            <p>פעמיים בשבוע תקבלו מייל עם סיכום ההוצאות, ההכנסות והחיסכון שלכם. בלי לפתוח את האפליקציה, תדעו איפה אתם עומדים.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery -->
+  <section class="screenshots-section">
+    <div class="container">
+      <h2 class="section-title text-center mb-2">איך זה נראה מבפנים</h2>
+      <p class="section-subtitle text-center mb-5">הצצה למסכים המרכזיים של MoneyMoney</p>
+
+      <div class="screenshots-grid">
+        <div class="screenshot-item screenshot-item--wide">
+          <img src="images/screenshot-story.png" alt="הסיפור של הכסף שלך — סיכום חודשי חכם">
+          <div class="screenshot-label">הסיפור של הכסף שלך</div>
+        </div>
+        <div class="screenshot-item">
+          <img src="images/screenshot-categories.png" alt="הוצאות משמעותיות לפי קטגוריה">
+          <div class="screenshot-label">הוצאות לפי קטגוריה</div>
+        </div>
+        <div class="screenshot-item">
+          <img src="images/screenshot-subscriptions.png" alt="מעקב מנויים חודשיים">
+          <div class="screenshot-label">המנויים שלי</div>
+        </div>
+        <div class="screenshot-item screenshot-item--wide">
+          <img src="images/screenshot-features.png" alt="מה אפשר לעשות — כלים לניהול כסף">
+          <div class="screenshot-label">כלים לניהול הכסף</div>
+        </div>
       </div>
     </div>
   </section>
@@ -140,15 +212,15 @@
           <div class="step-card text-center">
             <div class="step-number">1</div>
             <h3>הוסיפו חשבונות</h3>
-            <p>הגדירו את הבנקים וכרטיסי האשראי שלכם ב-MoneyMoney עם פרטי ההתחברות.</p>
+            <p>הגדירו את הבנקים וכרטיסי האשראי שלכם עם פרטי ההתחברות. מחברים פעם אחת — ושוכחים.</p>
           </div>
         </div>
 
         <div class="col-md-4">
           <div class="step-card text-center">
             <div class="step-number">2</div>
-            <h3>הפעילו סנכרון</h3>
-            <p>לחצו על ״התחל סנכרון״ — MoneyMoney יתחבר לבנקים ויאסוף את כל התנועות.</p>
+            <h3>האפליקציה עובדת ברקע</h3>
+            <p>MoneyMoney יתחבר לבנקים ויאסוף את כל התנועות באופן אוטומטי — בלי שתצטרכו לעשות כלום.</p>
           </div>
         </div>
 
@@ -156,7 +228,7 @@
           <div class="step-card text-center">
             <div class="step-number">3</div>
             <h3>צפו בתמונה המלאה</h3>
-            <p>כל העו״ש מכל החשבונות שלכם — מיוצא לקובץ ומסונכרן לאפליקציה.</p>
+            <p>כל ההכנסות, ההוצאות והמאזן שלכם — מסודרים לפי קטגוריות, עם גרפים ותובנות חכמות.</p>
           </div>
         </div>
 
@@ -164,26 +236,28 @@
     </div>
   </section>
 
-  <!-- Supported Banks -->
-  <section class="banks-section">
-    <div class="container text-center">
-      <h2 class="section-title mb-4">מוסדות פיננסיים נתמכים</h2>
-      <p class="section-subtitle mb-4">תמיכה בכל הבנקים וחברות האשראי המובילות בישראל</p>
-      <div class="banks-grid">
-        <span class="bank-badge">בנק הפועלים</span>
-        <span class="bank-badge">בנק לאומי</span>
-        <span class="bank-badge">בנק דיסקונט</span>
-        <span class="bank-badge">בנק מזרחי טפחות</span>
-        <span class="bank-badge">בנק הבינלאומי</span>
-        <span class="bank-badge">בנק מרכנתיל</span>
-        <span class="bank-badge">בנק יהב</span>
-        <span class="bank-badge">בנק מסד</span>
-        <span class="bank-badge">בנק אוצר החייל</span>
-        <span class="bank-badge">ויזה כאל</span>
-        <span class="bank-badge">ישראכרט</span>
-        <span class="bank-badge">מקס (לאומי קארד)</span>
-        <span class="bank-badge">אמריקן אקספרס</span>
-        <span class="bank-badge">בינלאומי ביט</span>
+  <!-- Security & Privacy -->
+  <section class="security-section">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6">
+          <div class="security-card">
+            <div class="security-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h3>הפרטים שלכם בטוחים</h3>
+            <p>סיסמאות הבנק נשמרות <strong>מוצפנות על המחשב שלכם בלבד</strong> — הן לעולם לא עוזבות אותו ואף אחד חוץ מכם לא יכול לגשת אליהן.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="security-card">
+            <div class="security-icon security-icon--gold">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <h3>מחברים פעם אחת, שוכחים</h3>
+            <p>ברגע שהחשבונות מחוברים, התנועות זורמות לכאן לבד. האפליקציה רצה ברקע במחשב — פשוט עוקבים אחרי הכסף מהדפדפן.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -195,7 +269,7 @@
         <img src="images/logo.svg" alt="" width="80" height="80" class="mb-4">
         <h2>מוכנים להתחיל?</h2>
         <p class="cta-text">הורידו את MoneyMoney בחינם והתחילו לעקוב אחרי הכסף שלכם.</p>
-        <a href="https://github.com/agammyshhay/moneymoney/releases/latest" class="btn btn-light btn-lg rounded-pill px-5 mt-3">
+        <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.0.13/MoneyMoney-Setup-1.0.13.exe" class="btn btn-light btn-lg rounded-pill px-5 mt-3">
           <i class="bi bi-download ms-2"></i>
           הורדה בחינם
         </a>
@@ -230,7 +304,8 @@
         </div>
         <div class="col-md-4 text-md-start">
           <p class="footer-text">
-            מבוסס על <a href="https://github.com/eshaham/israeli-bank-scrapers" target="_blank" rel="noopener">israeli-bank-scrapers</a>
+            בנוי על <a href="https://github.com/brafdlog/caspion" target="_blank" rel="noopener">כספיון (Caspion)</a>
+            ועל <a href="https://github.com/eshaham/israeli-bank-scrapers" target="_blank" rel="noopener">israeli-bank-scrapers</a>
           </p>
           <p class="footer-copyright">&copy; 2026 MoneyMoney. קוד פתוח תחת רישיון MIT.</p>
         </div>
@@ -238,7 +313,7 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (for navbar collapse if needed) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
