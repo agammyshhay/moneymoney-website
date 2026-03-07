@@ -131,6 +131,26 @@ body {
   font-weight: 500;
 }
 
+.hero-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.hero-trust-item i {
+  color: var(--success);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
 .hero-image-wrapper {
   position: relative;
 }
@@ -442,6 +462,11 @@ body {
   color: var(--gold-dark);
 }
 
+.security-icon--green {
+  background: #e0f2f1;
+  color: #00796b;
+}
+
 .security-card h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -455,6 +480,22 @@ body {
   margin: 0;
   max-width: 380px;
   margin: 0 auto;
+}
+
+.security-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.security-link:hover {
+  text-decoration: underline;
+  color: var(--primary-dark);
 }
 
 /* ---- CTA Section ---- */
