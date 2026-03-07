@@ -154,45 +154,43 @@ body {
 .hero-security-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  gap: 0.6rem;
+  background: #f0faf0;
   border: 1px solid #c8e6c9;
-  border-radius: 12px;
-  padding: 0.75rem 1.25rem;
+  border-radius: 100px;
+  padding: 0.5rem 1.1rem 0.5rem 0.9rem;
   text-decoration: none;
-  color: var(--text);
+  color: #2e7d32;
+  font-size: 0.88rem;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .hero-security-badge:hover {
+  background: #e8f5e9;
   border-color: #a5d6a7;
-  box-shadow: 0 2px 12px rgba(46, 125, 50, 0.12);
+  box-shadow: 0 2px 12px rgba(46, 125, 50, 0.15);
   transform: translateY(-1px);
-  color: var(--text);
-}
-
-.hero-security-badge-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-}
-
-.hero-security-badge-text {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  color: var(--text-secondary);
-}
-
-.hero-security-badge-text strong {
-  font-size: 0.85rem;
   color: #2e7d32;
 }
 
-.hero-security-badge-text i {
-  display: inline;
-  font-size: 0.7rem;
+.hero-security-badge-icon {
+  font-size: 1.15rem;
+  color: #43a047;
+}
+
+.hero-security-badge-label {
+  white-space: nowrap;
+}
+
+.hero-security-badge-arrow {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.hero-security-badge:hover .hero-security-badge-arrow {
+  transform: translateX(-3px);
 }
 
 .hero-image-wrapper {
