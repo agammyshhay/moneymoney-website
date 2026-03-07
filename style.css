@@ -151,46 +151,29 @@ body {
   flex-shrink: 0;
 }
 
-.hero-security-badge {
+.hero-verified-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  background: #f0faf0;
-  border: 1px solid #c8e6c9;
+  gap: 0.3rem;
+  background: #e8f5e9;
   border-radius: 100px;
-  padding: 0.5rem 1.1rem 0.5rem 0.9rem;
-  text-decoration: none;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: #2e7d32;
-  font-size: 0.88rem;
-  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
   transition: all 0.2s ease;
 }
 
-.hero-security-badge:hover {
-  background: #e8f5e9;
-  border-color: #a5d6a7;
-  box-shadow: 0 2px 12px rgba(46, 125, 50, 0.15);
-  transform: translateY(-1px);
-  color: #2e7d32;
-}
-
-.hero-security-badge-icon {
-  font-size: 1.15rem;
+.hero-verified-link i {
+  font-size: 0.8rem;
   color: #43a047;
 }
 
-.hero-security-badge-label {
-  white-space: nowrap;
-}
-
-.hero-security-badge-arrow {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  transition: transform 0.2s ease;
-}
-
-.hero-security-badge:hover .hero-security-badge-arrow {
-  transform: translateX(-3px);
+.hero-verified-link:hover {
+  background: #c8e6c9;
+  color: #1b5e20;
 }
 
 .hero-image-wrapper {
