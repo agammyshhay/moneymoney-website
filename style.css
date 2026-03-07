@@ -151,28 +151,35 @@ body {
   flex-shrink: 0;
 }
 
-.hero-verified-link {
+.btn-security-report {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  background: #e8f5e9;
-  border-radius: 100px;
-  padding: 0.15rem 0.6rem;
-  font-size: 0.78rem;
-  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   color: #2e7d32;
+  background: #e8f5e9;
+  border: 1px solid #c8e6c9;
   text-decoration: none;
-  white-space: nowrap;
   transition: all 0.2s ease;
 }
 
-.hero-verified-link i {
-  font-size: 0.8rem;
-  color: #43a047;
+.btn-security-report i {
+  font-size: 1.1rem;
 }
 
-.hero-verified-link:hover {
+.btn-security-report-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-right: auto;
+}
+
+.btn-security-report:hover {
   background: #c8e6c9;
+  border-color: #a5d6a7;
   color: #1b5e20;
 }
 
