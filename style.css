@@ -249,8 +249,15 @@ body {
   margin: 0.15rem 0 0;
 }
 
-.report-download {
+.report-actions {
+  display: flex;
+  gap: 0.5rem;
   margin-right: auto;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.report-download {
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -273,10 +280,14 @@ body {
     padding: 1.25rem;
   }
 
-  .report-download {
+  .report-actions {
     width: 100%;
-    text-align: center;
+    justify-content: center;
     margin-top: 0.5rem;
+  }
+
+  .report-download {
+    text-align: center;
   }
 
   .report-embed-wrapper {
@@ -615,6 +626,10 @@ body {
 .security-link:hover {
   text-decoration: underline;
   color: var(--primary-dark);
+}
+
+.security-link + .security-link {
+  margin-top: 0.25rem;
 }
 
 /* ---- CTA Section ---- */
