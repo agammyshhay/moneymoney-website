@@ -36,7 +36,11 @@
           <span class="d-none d-sm-inline">GitHub</span>
         </a>
         <a href="#how" class="nav-link-custom d-none d-sm-flex">
-          <span>איך מתחילים?</span>
+          <span>איך זה עובד?</span>
+        </a>
+        <a href="https://moneym.base44.app/" class="nav-link-custom d-none d-sm-flex" target="_blank" rel="noopener">
+          <i class="bi bi-window"></i>
+          <span>אפליקציה</span>
         </a>
         <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe" class="btn btn-primary btn-sm rounded-pill px-3">
           <i class="bi bi-download ms-1"></i>
@@ -57,16 +61,16 @@
             <span class="text-gradient">בקוד פתוח.</span>
           </h1>
           <p class="hero-subtitle">
-            כל הבנקים והאשראי במקום אחד. מתקינים פעם אחת על המחשב, ומשם הכל באפליקציה — נגיש מכל מכשיר, מכל מקום.
+            כל הבנקים והאשראי במקום אחד. עובדים ישירות דרך הדפדפן, או מתקינים על המחשב לסנכרון אוטומטי מהבנקים.
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe" class="btn btn-primary btn-lg rounded-pill px-4">
+            <a href="https://moneym.base44.app/" class="btn btn-primary btn-lg rounded-pill px-4" target="_blank" rel="noopener">
+              <i class="bi bi-cursor ms-2"></i>
+              כניסה לאפליקציה
+            </a>
+            <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe" class="btn btn-outline-secondary btn-lg rounded-pill px-4">
               <i class="bi bi-download ms-2"></i>
               הורדה למחשב
-            </a>
-            <a href="https://github.com/agammyshhay/moneymoney" class="btn btn-outline-secondary btn-lg rounded-pill px-4" target="_blank" rel="noopener">
-              <i class="bi bi-code-slash ms-2"></i>
-              קוד מקור
             </a>
             <a href="#security-report" class="btn-security-report rounded-pill">
               <i class="bi bi-shield-check"></i>
@@ -87,9 +91,87 @@
         </div>
         <div class="col-lg-6 text-center">
           <div class="hero-image-wrapper">
-            <img src="images/screenshot-overview.png" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי" class="hero-image">
+            <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/webapp-screenshot.png" class="d-block w-100" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/webapp-screenshot-story.png" class="d-block w-100" alt="הסיפור של הכסף שלך">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/webapp-screenshot-categories.png" class="d-block w-100" alt="הוצאות לפי קטגוריה">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/webapp-screenshot-subscriptions.png" class="d-block w-100" alt="המנויים שלי">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                <span class="visually-hidden">הקודם</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+                <span class="visually-hidden">הבא</span>
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <h2 class="section-title text-center mb-2">איך זה עובד?</h2>
+      <p class="section-subtitle text-center mb-5">שתי דרכים להתחיל — בחרו מה מתאים לכם</p>
+
+      <div class="how-paths">
+        <div class="path-card path-card--web">
+          <div class="path-card-inner">
+            <div class="path-icon-ring path-icon-ring--web">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <span class="path-badge path-badge--web">ללא התקנה</span>
+            <h3>אפליקציית ווב</h3>
+            <p>עובדים ישירות דרך הדפדפן — ללא התקנה. מזינים תנועות ידנית, מנהלים תקציב ומשתמשים בכל הכלים מכל מכשיר.</p>
+            <a href="https://moneym.base44.app/" class="btn btn-primary rounded-pill px-4" target="_blank" rel="noopener">
+              <i class="bi bi-cursor ms-2"></i>
+              כניסה לאפליקציה
+            </a>
+          </div>
+        </div>
+
+        <div class="path-or">
+          <span>או</span>
+        </div>
+
+        <div class="path-card path-card--desktop">
+          <div class="path-card-inner">
+            <div class="path-icon-ring path-icon-ring--desktop">
+              <i class="bi bi-pc-display"></i>
+            </div>
+            <span class="path-badge path-badge--desktop">קוד פתוח</span>
+            <h3>סנכרון אוטומטי</h3>
+            <p>מתקינים את התוכנה פעם אחת, מחברים את הבנקים — והתנועות מסתנכרנות לאפליקציה אוטומטית ברקע.</p>
+            <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe" class="btn btn-outline-primary rounded-pill px-4">
+              <i class="bi bi-download ms-2"></i>
+              הורדה למחשב
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-callout text-center mt-5">
+        <i class="bi bi-info-circle"></i>
+        <span>אפשר להתחיל עם אפליקציית הווב בלבד ולהוסיף את התוכנה מאוחר יותר בכל שלב.</span>
       </div>
     </div>
   </section>
@@ -120,37 +202,6 @@
         <div class="report-embed-wrapper">
           <iframe src="security-report.pdf" class="report-embed" title="דו״ח אבטחה ופרטיות"></iframe>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="how-section" id="how">
-    <div class="container">
-      <h2 class="section-title text-center mb-2">איך מתחילים?</h2>
-      <p class="section-subtitle text-center mb-5">התקנה של 2 דקות על המחשב — וזהו</p>
-      <div class="row g-4 justify-content-center">
-
-        <div class="col-md-6">
-          <div class="step-card text-center">
-            <div class="step-number">1</div>
-            <h3>מורידים ומתקינים <span class="step-badge">פעם אחת, 2 דקות</span></h3>
-            <p><a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe">מורידים את התוכנה</a>, מתקינים על המחשב ומחברים את הבנקים וכרטיסי האשראי — וזהו.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="step-card text-center">
-            <div class="step-number">2</div>
-            <h3>נרשמים באפליקציה <span class="step-badge">לא חובה</span></h3>
-            <p>רוצים לגשת מכל מכשיר? נכנסים ל-<a href="https://moneym.base44.app" target="_blank" rel="noopener">moneym.base44.app</a> ופותחים חשבון — כל התנועות יסונכרנו אוטומטית.</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="how-callout text-center mt-5">
-        <i class="bi bi-arrow-repeat"></i>
-        <span>התוכנה מסנכרנת תנועות ברקע כשהמחשב דלוק. נרשמים באפליקציה כדי לגשת מכל מכשיר.</span>
       </div>
     </div>
   </section>
@@ -256,19 +307,47 @@
       <h2 class="section-title text-center mb-2">הצצה מבפנים</h2>
       <p class="section-subtitle text-center mb-5">ככה זה נראה ביום-יום</p>
 
-      <div class="screenshots-grid">
-        <div class="screenshot-item screenshot-item--wide">
-          <img src="images/screenshot-story.png" alt="הסיפור של הכסף שלך — סיכום חודשי חכם">
-          <div class="screenshot-label">הסיפור של הכסף שלך</div>
+      <div id="screenshotsCarousel" class="carousel slide screenshots-carousel" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="סקירה כללית"></button>
+          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="1" aria-label="הסיפור של הכסף שלך"></button>
+          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="2" aria-label="הוצאות לפי קטגוריה"></button>
+          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="3" aria-label="המנויים שלי"></button>
         </div>
-        <div class="screenshot-item">
-          <img src="images/screenshot-categories.png" alt="הוצאות לפי קטגוריה">
-          <div class="screenshot-label">הוצאות לפי קטגוריה</div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/webapp-screenshot.png" class="d-block w-100" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי">
+            <div class="carousel-caption d-none d-md-block">
+              <p>סקירה כללית</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/webapp-screenshot-story.png" class="d-block w-100" alt="הסיפור של הכסף שלך — סיכום חודשי חכם">
+            <div class="carousel-caption d-none d-md-block">
+              <p>הסיפור של הכסף שלך</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/webapp-screenshot-categories.png" class="d-block w-100" alt="הוצאות לפי קטגוריה">
+            <div class="carousel-caption d-none d-md-block">
+              <p>הוצאות לפי קטגוריה</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/webapp-screenshot-subscriptions.png" class="d-block w-100" alt="המנויים שלי — מעקב מנויים חודשיים">
+            <div class="carousel-caption d-none d-md-block">
+              <p>המנויים שלי</p>
+            </div>
+          </div>
         </div>
-        <div class="screenshot-item">
-          <img src="images/screenshot-subscriptions.png" alt="מעקב מנויים חודשיים">
-          <div class="screenshot-label">המנויים שלי</div>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="prev">
+          <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+          <span class="visually-hidden">הקודם</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="next">
+          <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+          <span class="visually-hidden">הבא</span>
+        </button>
       </div>
     </div>
   </section>
@@ -324,12 +403,18 @@
       <div class="cta-card">
         <img src="images/logo.svg" alt="" width="80" height="80" class="mb-4">
         <h2>רוצים לנסות?</h2>
-        <p class="cta-text">מורידים, מתקינים, ומחברים את הבנקים. תוך כמה דקות — הכל מסודר.</p>
-        <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe" class="btn btn-light btn-lg rounded-pill px-5 mt-3">
-          <i class="bi bi-download ms-2"></i>
-          הורדה למחשב
-        </a>
-        <p class="cta-note mt-3">ההתקנה דורשת מחשב עם Windows &bull; חינם &bull; קוד פתוח</p>
+        <p class="cta-text">מתחילים ישירות בדפדפן — או מורידים את התוכנה לסנכרון אוטומטי מהבנקים.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
+          <a href="https://moneym.base44.app/" class="btn btn-light btn-lg rounded-pill px-5" target="_blank" rel="noopener">
+            <i class="bi bi-cursor ms-2"></i>
+            כניסה לאפליקציה
+          </a>
+          <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe" class="btn btn-outline-light btn-lg rounded-pill px-4">
+            <i class="bi bi-download ms-2"></i>
+            הורדה למחשב
+          </a>
+        </div>
+        <p class="cta-note mt-3">חינם &bull; קוד פתוח &bull; תוכנה דורשת Windows</p>
       </div>
     </div>
   </section>
@@ -347,6 +432,9 @@
         </div>
         <div class="col-md-4 text-center">
           <div class="footer-links">
+            <a href="https://moneym.base44.app/" target="_blank" rel="noopener">
+              <i class="bi bi-window"></i> אפליקציה
+            </a>
             <a href="https://github.com/agammyshhay/moneymoney/releases/download/v1.1.1/MoneyMoney-Setup-1.1.1.exe">
               <i class="bi bi-download"></i> הורדה
             </a>
