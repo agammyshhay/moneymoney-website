@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moneymoney-website.vercel.app/sitemap.xml
