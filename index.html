@@ -6,7 +6,10 @@
   <title>MoneyMoney — ניהול פיננסי בקוד פתוח</title>
   <meta name="description" content="MoneyMoney אוסף את כל העו״ש מהבנקים והאשראי שלך למקום אחד. פרויקט אישי, קוד פתוח, בחינם.">
   <meta name="google-site-verification" content="-Td58I9cxVvYYyAONjhCuw2Z6xtLMvEHE5Ztj78k9p0" />
-  <meta name="theme-color" content="#4f46e5">
+  <meta name="theme-color" content="#1a73e8">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="language" content="Hebrew">
+  <meta name="author" content="MoneyMoney">
   <link rel="canonical" href="https://moneymoney-website.vercel.app/" />
   <link rel="alternate" hreflang="he" href="https://moneymoney-website.vercel.app/" />
 
@@ -39,6 +42,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="images/webapp-screenshot.png" fetchpriority="high">
+
   <link rel="stylesheet" href="style.css">
 
   <!-- Structured Data -->
@@ -63,6 +69,69 @@
     "inLanguage": "he"
   }
   </script>
+
+  <!-- Organization schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MoneyMoney",
+    "url": "https://moneymoney-website.vercel.app/",
+    "logo": "https://moneymoney-website.vercel.app/images/logo.png",
+    "sameAs": ["https://github.com/agammyshhay/moneymoney"]
+  }
+  </script>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "he",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "האם MoneyMoney בחינם?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. MoneyMoney הוא פרויקט אישי בקוד פתוח, חינם לחלוטין תחת רישיון MIT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם הסיסמאות של הבנק נשמרות בענן?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לא. שמות המשתמש והסיסמאות של הבנקים מוצפנים על המחשב שלך בלבד ולא נשלחים לשרת או לענן."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "אילו בנקים וכרטיסי אשראי נתמכים?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כל הבנקים וחברות האשראי הגדולות בישראל נתמכים, באמצעות הספרייה israeli-bank-scrapers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם יש אפליקציה לנייד?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. אפליקציית הווב עובדת מכל מכשיר עם דפדפן, וקיימת גם גרסת בטא לאנדרואיד ב-Google Play."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם אני חייב להתקין משהו על המחשב?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לא חייב. אפשר להשתמש באפליקציית הווב בלבד ולייבא קבצים מהבנק ידנית. ההתקנה על המחשב היא לסנכרון אוטומטי מהבנקים."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -78,16 +147,25 @@
           <i class="bi bi-github"></i>
           <span class="d-none d-sm-inline">GitHub</span>
         </a>
-        <a href="#how" class="nav-link-custom d-none d-sm-flex">
+        <a href="#content" class="nav-link-custom d-none d-sm-flex" data-tab-target="tab-how-btn">
           <span>איך זה עובד?</span>
         </a>
         <a href="https://moneym.base44.app/" class="nav-link-custom d-none d-sm-flex" target="_blank" rel="noopener">
-          <i class="bi bi-window"></i>
-          <span>אפליקציה</span>
+          <i class="bi bi-globe2"></i>
+          <span>Web App</span>
         </a>
-        <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe" class="btn btn-primary btn-sm rounded-pill px-3">
-          <i class="bi bi-download ms-1"></i>
-          הורדה
+        <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe" class="btn btn-primary btn-sm rounded-pill px-3" aria-label="הורדה למחשב Windows" title="הורדה למחשב Windows">
+          <i class="bi bi-windows ms-1"></i>
+          Windows
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.base6926e27d88645be4711a8c67.app"
+           class="btn-android-nav"
+           target="_blank" rel="noopener"
+           aria-label="בטא לאנדרואיד ב-Google Play"
+           title="בטא לאנדרואיד ב-Google Play">
+          <i class="bi bi-google-play"></i>
+          <span class="d-none d-md-inline">Android</span>
+          <span class="nav-beta-badge">בטא</span>
         </a>
       </div>
     </div>
@@ -109,21 +187,41 @@
             כל הבנקים והאשראי במקום אחד. עובדים ישירות דרך הדפדפן, או מתקינים על המחשב לסנכרון אוטומטי מהבנקים.
           </p>
           <div class="d-flex flex-column gap-3 mt-4">
-            <div class="d-flex gap-2 flex-nowrap">
-              <a href="https://moneym.base44.app/" class="btn btn-primary rounded-pill px-3 py-2" target="_blank" rel="noopener">
-                <i class="bi bi-cursor ms-1"></i>
-                כניסה לאפליקציה
+            <div class="hero-cta-icons">
+              <a href="https://moneym.base44.app/"
+                 class="btn-icon btn-icon--primary"
+                 target="_blank" rel="noopener"
+                 aria-label="כניסה לאפליקציית הווב"
+                 title="כניסה לאפליקציית הווב">
+                <i class="bi bi-globe2"></i>
+                <span class="btn-icon-caption">Web App</span>
               </a>
-              <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe" class="btn btn-outline-secondary rounded-pill px-3 py-2">
-                <i class="bi bi-download ms-1"></i>
-                הורדה למחשב
+              <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe"
+                 class="btn-icon btn-icon--windows"
+                 aria-label="הורדה למחשב Windows"
+                 title="הורדה למחשב Windows">
+                <i class="bi bi-windows"></i>
+                <span class="btn-icon-caption">Windows</span>
               </a>
-              <a href="https://github.com/agammyshhay/moneymoney" class="btn btn-outline-secondary rounded-pill px-3 py-2" target="_blank" rel="noopener">
-                <i class="bi bi-github ms-1"></i>
-                קוד מקור
+              <a href="https://play.google.com/store/apps/details?id=com.base6926e27d88645be4711a8c67.app"
+                 class="btn-icon btn-icon--android"
+                 target="_blank" rel="noopener"
+                 aria-label="בטא לאנדרואיד ב-Google Play"
+                 title="בטא לאנדרואיד ב-Google Play">
+                <i class="bi bi-google-play"></i>
+                <span class="btn-icon-badge">בטא</span>
+                <span class="btn-icon-caption">Android</span>
+              </a>
+              <a href="https://github.com/agammyshhay/moneymoney"
+                 class="btn-icon btn-icon--github"
+                 target="_blank" rel="noopener"
+                 aria-label="קוד מקור ב-GitHub"
+                 title="קוד מקור ב-GitHub">
+                <i class="bi bi-github"></i>
+                <span class="btn-icon-caption">GitHub</span>
               </a>
             </div>
-            <a href="#security-report" class="btn-security-report rounded-pill align-self-start">
+            <a href="#content" class="btn-security-report rounded-pill align-self-start" data-tab-target="tab-security-btn">
               <i class="bi bi-shield-check"></i>
               הסיסמאות לא יוצאות מהמחשב
               <span class="btn-security-report-sub">דוחות אבטחה — Claude & Grok</span>
@@ -151,16 +249,16 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="images/webapp-screenshot.png" class="d-block w-100" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי">
+                  <img src="images/webapp-screenshot.png" class="d-block w-100" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי" width="1168" height="600" fetchpriority="high">
                 </div>
                 <div class="carousel-item">
-                  <img src="images/webapp-screenshot-story.png" class="d-block w-100" alt="הסיפור של הכסף שלך" loading="lazy">
+                  <img src="images/webapp-screenshot-story.png" class="d-block w-100" alt="הסיפור של הכסף שלך" width="1168" height="600" loading="lazy">
                 </div>
                 <div class="carousel-item">
-                  <img src="images/webapp-screenshot-categories.png" class="d-block w-100" alt="הוצאות לפי קטגוריה" loading="lazy">
+                  <img src="images/webapp-screenshot-categories.png" class="d-block w-100" alt="הוצאות לפי קטגוריה" width="1168" height="600" loading="lazy">
                 </div>
                 <div class="carousel-item">
-                  <img src="images/webapp-screenshot-subscriptions.png" class="d-block w-100" alt="המנויים שלי" loading="lazy">
+                  <img src="images/webapp-screenshot-subscriptions.png" class="d-block w-100" alt="המנויים שלי" width="1168" height="600" loading="lazy">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -178,294 +276,234 @@
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section class="how-section" id="how">
+  <!-- Content tabs: How / Features / Security -->
+  <section class="content-section" id="content">
     <div class="container">
-      <h2 class="section-title text-center mb-2">איך זה עובד?</h2>
-      <p class="section-subtitle text-center mb-5">שתי דרכים להתחיל — בחרו מה מתאים לכם</p>
 
-      <div class="how-paths">
-        <div class="path-card path-card--web">
-          <div class="path-card-inner">
-            <div class="path-icon-ring path-icon-ring--web">
-              <i class="bi bi-globe2"></i>
-            </div>
-            <span class="path-badge path-badge--web">ללא התקנה</span>
-            <h3>אפליקציית ווב</h3>
-            <p>עובדים ישירות דרך הדפדפן — ללא התקנה. מזינים תנועות ידנית, מנהלים תקציב ומשתמשים בכל הכלים מכל מכשיר.</p>
-            <a href="https://moneym.base44.app/" class="btn btn-primary rounded-pill px-4" target="_blank" rel="noopener">
-              <i class="bi bi-cursor ms-2"></i>
-              כניסה לאפליקציה
-            </a>
-          </div>
-        </div>
-
-        <div class="path-or">
-          <span>או</span>
-        </div>
-
-        <div class="path-card path-card--desktop">
-          <div class="path-card-inner">
-            <div class="path-icon-ring path-icon-ring--desktop">
-              <i class="bi bi-pc-display"></i>
-            </div>
-            <span class="path-badge path-badge--desktop">קוד פתוח</span>
-            <h3>סנכרון אוטומטי</h3>
-            <p>מתקינים את התוכנה פעם אחת, מחברים את הבנקים — והתנועות מסתנכרנות לאפליקציה אוטומטית ברקע.</p>
-            <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe" class="btn btn-outline-primary rounded-pill px-4">
-              <i class="bi bi-download ms-2"></i>
-              הורדה למחשב
-            </a>
-          </div>
-        </div>
+      <div class="tabs-rail" role="tablist" aria-label="תוכן">
+        <button class="tab-link active" id="tab-how-btn" data-bs-toggle="tab" data-bs-target="#tab-how" type="button" role="tab" aria-controls="tab-how" aria-selected="true">
+          איך זה עובד?
+        </button>
+        <button class="tab-link" id="tab-features-btn" data-bs-toggle="tab" data-bs-target="#tab-features" type="button" role="tab" aria-controls="tab-features" aria-selected="false">
+          פיצ׳רים
+        </button>
+        <button class="tab-link" id="tab-security-btn" data-bs-toggle="tab" data-bs-target="#tab-security" type="button" role="tab" aria-controls="tab-security" aria-selected="false">
+          אבטחה ופרטיות
+        </button>
       </div>
 
-      <div class="how-callout text-center mt-5">
-        <i class="bi bi-info-circle"></i>
-        <span>אפשר להתחיל עם אפליקציית הווב בלבד ולהוסיף את התוכנה מאוחר יותר בכל שלב.</span>
-      </div>
-    </div>
-  </section>
+      <div class="tab-content tabs-body">
 
-  <!-- Security Report Embed -->
-  <section class="report-section" id="security-report">
-    <div class="container">
-      <div class="report-card">
-        <div class="report-header">
-          <div class="report-badge">
-            <i class="bi bi-shield-check"></i>
+        <!-- How It Works pane -->
+        <div class="tab-pane fade show active" id="tab-how" role="tabpanel" aria-labelledby="tab-how-btn" tabindex="0">
+          <div class="pane-intro">
+            <h2 class="pane-title">איך זה עובד?</h2>
+            <p class="pane-lead">שתי דרכים להתחיל — בחרו מה שמתאים לכם.</p>
           </div>
-          <div>
-            <h2 class="report-title">דו״ח אבטחה ופרטיות</h2>
-            <p class="report-subtitle">בדיקת אבטחה מקיפה של קוד המקור — כולל הצפנה, אחסון סיסמאות ותקשורת עם שרתים</p>
+
+          <div class="how-paths">
+            <div class="path-card path-card--web">
+              <div class="path-card-inner">
+                <div class="path-icon-ring path-icon-ring--web">
+                  <i class="bi bi-globe2"></i>
+                </div>
+                <span class="path-badge path-badge--web">ללא התקנה</span>
+                <h3>אפליקציית ווב</h3>
+                <p>עובדים ישירות דרך הדפדפן. אפשר לייבא קבצים מבנקים וכרטיסי אשראי בישראל, להזין תנועות ידנית ולנהל את כל התקציב מכל מכשיר.</p>
+                <a href="https://moneym.base44.app/" class="btn btn-primary rounded-pill px-4" target="_blank" rel="noopener">
+                  <i class="bi bi-cursor ms-2"></i>
+                  כניסה לאפליקציה
+                </a>
+              </div>
+            </div>
+
+            <div class="path-or"><span>או</span></div>
+
+            <div class="path-card path-card--desktop">
+              <div class="path-card-inner">
+                <div class="path-icon-ring path-icon-ring--desktop">
+                  <i class="bi bi-pc-display"></i>
+                </div>
+                <span class="path-badge path-badge--desktop">קוד פתוח</span>
+                <h3>סנכרון אוטומטי</h3>
+                <p>מתקינים את התוכנה פעם אחת, מחברים את הבנקים — והתנועות מסתנכרנות לאפליקציה אוטומטית ברקע.</p>
+                <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe" class="btn btn-outline-primary rounded-pill px-4">
+                  <i class="bi bi-download ms-2"></i>
+                  הורדה למחשב
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="report-actions">
-            <a href="security-report.pdf" class="btn btn-outline-success btn-sm rounded-pill report-download" target="_blank" rel="noopener">
+
+          <div class="how-callout text-center mt-4">
+            <i class="bi bi-info-circle"></i>
+            <span>אפשר להתחיל עם אפליקציית הווב בלבד ולהוסיף את התוכנה מאוחר יותר בכל שלב.</span>
+          </div>
+        </div>
+
+        <!-- Features pane -->
+        <div class="tab-pane fade" id="tab-features" role="tabpanel" aria-labelledby="tab-features-btn" tabindex="0">
+          <div class="pane-intro">
+            <h2 class="pane-title">מה יש בפנים?</h2>
+            <p class="pane-lead">בניתי את הכלים שהייתי רוצה שיהיו לי.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="bi bi-bank"></i></div>
+                <h3>כל הבנקים והאשראי</h3>
+                <p>מחברים פעם אחת — התנועות מגיעות לבד.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="bi bi-tags"></i></div>
+                <h3>קטגוריות אוטומטיות</h3>
+                <p>סופר, דלק, בילויים — מגדירים מיפוי פעם אחת והאפליקציה ממיינת לבד.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="bi bi-shield-lock"></i></div>
+                <h3>פרטי הבנק — רק אצלך</h3>
+                <p>פרטי ההתחברות נשמרים מוצפנים על המחשב שלך. לא בענן, לא אצלנו.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="bi bi-people"></i></div>
+                <h3>תקציב משפחתי</h3>
+                <p>מזמינים בן/בת זוג לאפליקציה. כל התנועות של שניכם — ביחד.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon feature-icon--purple"><i class="bi bi-stars"></i></div>
+                <h3>הסיפור של הכסף שלך</h3>
+                <p>סיכום חודשי שאומר לך כמה נשאר, כמה אפשר להוציא ביום, וכמה חסכת.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon feature-icon--green"><i class="bi bi-bullseye"></i></div>
+                <h3>יעד חיסכון</h3>
+                <p>הגדירו יעד חודשי ותראו בדיוק איפה אתם עומדים.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon feature-icon--orange"><i class="bi bi-credit-card-2-back"></i></div>
+                <h3>מעקב מנויים</h3>
+                <p>נטפליקס, ביטוחים, אינטרנט — תראו בדיוק על מה אתם משלמים כל חודש.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="feature-card">
+                <div class="feature-icon feature-icon--teal"><i class="bi bi-envelope-paper"></i></div>
+                <h3>סיכום למייל</h3>
+                <p>סיכום קבוע של הוצאות, הכנסות וחיסכון — ישר למייל.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pane-divider">
+            <span>הצצה מבפנים</span>
+          </div>
+
+          <div id="screenshotsCarousel" class="carousel slide screenshots-carousel" data-bs-ride="false" data-bs-interval="3500">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="סקירה כללית"></button>
+              <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="1" aria-label="הסיפור של הכסף שלך"></button>
+              <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="2" aria-label="הוצאות לפי קטגוריה"></button>
+              <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="3" aria-label="המנויים שלי"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/webapp-screenshot.png" class="d-block w-100" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי" width="1168" height="600" loading="lazy">
+                <div class="carousel-caption d-none d-md-block"><p>סקירה כללית</p></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/webapp-screenshot-story.png" class="d-block w-100" alt="הסיפור של הכסף שלך — סיכום חודשי חכם" width="1168" height="600" loading="lazy">
+                <div class="carousel-caption d-none d-md-block"><p>הסיפור של הכסף שלך</p></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/webapp-screenshot-categories.png" class="d-block w-100" alt="הוצאות לפי קטגוריה" width="1168" height="600" loading="lazy">
+                <div class="carousel-caption d-none d-md-block"><p>הוצאות לפי קטגוריה</p></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/webapp-screenshot-subscriptions.png" class="d-block w-100" alt="המנויים שלי — מעקב מנויים חודשיים" width="1168" height="600" loading="lazy">
+                <div class="carousel-caption d-none d-md-block"><p>המנויים שלי</p></div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="prev">
+              <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+              <span class="visually-hidden">הקודם</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="next">
+              <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+              <span class="visually-hidden">הבא</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Security pane -->
+        <div class="tab-pane fade" id="tab-security" role="tabpanel" aria-labelledby="tab-security-btn" tabindex="0">
+          <div class="pane-intro">
+            <h2 class="pane-title">אבטחה ופרטיות</h2>
+            <p class="pane-lead">הסיסמאות לא יוצאות מהמחשב. הפרטים שלך נשארים שלך — ורק שלך.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="security-card">
+                <div class="security-icon">
+                  <i class="bi bi-shield-lock"></i>
+                </div>
+                <h3>הסיסמאות נשארות אצלך</h3>
+                <p>שמות המשתמש והסיסמאות של הבנקים מוצפנים <strong>על המחשב שלך בלבד</strong>. הם לא נשלחים לשרת, לענן, או לכל מקום אחר.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="security-card">
+                <div class="security-icon security-icon--gold">
+                  <i class="bi bi-eye"></i>
+                </div>
+                <h3>קוד פתוח — בדקו בעצמכם</h3>
+                <p>כל שורת קוד פתוחה ב-GitHub. אפשר לבדוק בדיוק מה קורה עם המידע שלכם.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="security-card">
+                <div class="security-icon security-icon--green">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <h3>נגיש מכל מכשיר</h3>
+                <p>רק התנועות עוברות לאפליקציה — בלי סיסמאות, בלי פרטי התחברות. נכנסים מכל מכשיר ורואים הכל מעודכן.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pane-divider">
+            <span>דו״ח אבטחה מלא</span>
+          </div>
+
+          <p class="pane-note">בדיקת אבטחה מקיפה של קוד המקור — כולל הצפנה, אחסון סיסמאות ותקשורת עם שרתים.</p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <a href="security-report.pdf" class="btn btn-outline-success btn-sm rounded-pill" target="_blank" rel="noopener">
               <i class="bi bi-file-earmark-pdf ms-1"></i>
               דו״ח Claude (PDF)
             </a>
-            <a href="https://grok.com/share/bGVnYWN5LWNvcHk_0eabbb0c-c1cf-43cc-a744-bdf7df5e70b9" class="btn btn-outline-success btn-sm rounded-pill report-download" target="_blank" rel="noopener">
+            <a href="https://grok.com/share/bGVnYWN5LWNvcHk_0eabbb0c-c1cf-43cc-a744-bdf7df5e70b9" class="btn btn-outline-success btn-sm rounded-pill" target="_blank" rel="noopener">
               <i class="bi bi-box-arrow-up-left ms-1"></i>
               דו״ח Grok
             </a>
           </div>
-        </div>
-        <div class="report-embed-wrapper">
-          <iframe src="security-report.pdf" class="report-embed" title="דו״ח אבטחה ופרטיות"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="features-section" id="features">
-    <div class="container">
-      <h2 class="section-title text-center mb-2">מה יש בפנים?</h2>
-      <p class="section-subtitle text-center mb-5">בניתי את הכלים שהייתי רוצה שיהיו לי</p>
-      <div class="row g-4">
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-bank"></i>
-            </div>
-            <h3>כל הבנקים והאשראי</h3>
-            <p>מחברים פעם אחת — התנועות מגיעות לבד.</p>
+          <div class="report-embed-wrapper">
+            <iframe src="security-report.pdf" class="report-embed" title="דו״ח אבטחה ופרטיות" loading="lazy"></iframe>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-tags"></i>
-            </div>
-            <h3>קטגוריות אוטומטיות</h3>
-            <p>סופר, דלק, בילויים — מגדירים מיפוי פעם אחת והאפליקציה ממיינת לבד.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-shield-lock"></i>
-            </div>
-            <h3>פרטי הבנק — רק אצלך</h3>
-            <p>פרטי ההתחברות נשמרים מוצפנים על המחשב שלך. לא בענן, לא אצלנו.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="bi bi-people"></i>
-            </div>
-            <h3>תקציב משפחתי</h3>
-            <p>מזמינים בן/בת זוג לאפליקציה. כל התנועות של שניכם — ביחד.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="row g-4 mt-1">
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--purple">
-              <i class="bi bi-stars"></i>
-            </div>
-            <h3>הסיפור של הכסף שלך</h3>
-            <p>סיכום חודשי שאומר לך כמה נשאר, כמה אפשר להוציא ביום, וכמה חסכת.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--green">
-              <i class="bi bi-bullseye"></i>
-            </div>
-            <h3>יעד חיסכון</h3>
-            <p>הגדירו יעד חודשי ותראו בדיוק איפה אתם עומדים.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--orange">
-              <i class="bi bi-credit-card-2-back"></i>
-            </div>
-            <h3>מעקב מנויים</h3>
-            <p>נטפליקס, ביטוחים, אינטרנט — תראו בדיוק על מה אתם משלמים כל חודש.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card">
-            <div class="feature-icon feature-icon--teal">
-              <i class="bi bi-envelope-paper"></i>
-            </div>
-            <h3>סיכום למייל</h3>
-            <p>סיכום קבוע של הוצאות, הכנסות וחיסכון — ישר למייל.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Screenshots -->
-  <section class="screenshots-section">
-    <div class="container">
-      <h2 class="section-title text-center mb-2">הצצה מבפנים</h2>
-      <p class="section-subtitle text-center mb-5">ככה זה נראה ביום-יום</p>
-
-      <div id="screenshotsCarousel" class="carousel slide screenshots-carousel" data-bs-ride="carousel" data-bs-interval="3500">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="סקירה כללית"></button>
-          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="1" aria-label="הסיפור של הכסף שלך"></button>
-          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="2" aria-label="הוצאות לפי קטגוריה"></button>
-          <button type="button" data-bs-target="#screenshotsCarousel" data-bs-slide-to="3" aria-label="המנויים שלי"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/webapp-screenshot.png" class="d-block w-100" alt="סקירה כללית — הכנסות, הוצאות ומאזן חודשי" loading="lazy">
-            <div class="carousel-caption d-none d-md-block">
-              <p>סקירה כללית</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/webapp-screenshot-story.png" class="d-block w-100" alt="הסיפור של הכסף שלך — סיכום חודשי חכם" loading="lazy">
-            <div class="carousel-caption d-none d-md-block">
-              <p>הסיפור של הכסף שלך</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/webapp-screenshot-categories.png" class="d-block w-100" alt="הוצאות לפי קטגוריה" loading="lazy">
-            <div class="carousel-caption d-none d-md-block">
-              <p>הוצאות לפי קטגוריה</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/webapp-screenshot-subscriptions.png" class="d-block w-100" alt="המנויים שלי — מעקב מנויים חודשיים" loading="lazy">
-            <div class="carousel-caption d-none d-md-block">
-              <p>המנויים שלי</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="prev">
-          <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
-          <span class="visually-hidden">הקודם</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#screenshotsCarousel" data-bs-slide="next">
-          <span class="carousel-nav-btn" aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
-          <span class="visually-hidden">הבא</span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Security -->
-  <section class="security-section">
-    <div class="container">
-      <h2 class="section-title text-center mb-2">אבטחה ופרטיות</h2>
-      <p class="section-subtitle text-center mb-5">הפרטים שלך נשארים שלך — ורק שלך</p>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
-          <div class="security-card">
-            <div class="security-icon">
-              <i class="bi bi-shield-lock"></i>
-            </div>
-            <h3>הסיסמאות נשארות אצלך</h3>
-            <p>שמות המשתמש והסיסמאות של הבנקים מוצפנים <strong>על המחשב שלך בלבד</strong>. הם לא נשלחים לשרת, לענן, או לכל מקום אחר.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="security-card">
-            <div class="security-icon security-icon--gold">
-              <i class="bi bi-eye"></i>
-            </div>
-            <h3>קוד פתוח — בדקו בעצמכם</h3>
-            <p>כל שורת קוד פתוחה ב-GitHub. אפשר לבדוק בדיוק מה קורה עם המידע שלכם.</p>
-            <a href="security-report.pdf" class="security-link" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-pdf ms-1"></i>
-              דו״ח אבטחה ופרטיות (PDF)
-            </a>
-            <a href="https://grok.com/share/bGVnYWN5LWNvcHk_0eabbb0c-c1cf-43cc-a744-bdf7df5e70b9" class="security-link" target="_blank" rel="noopener">
-              <i class="bi bi-box-arrow-up-left ms-1"></i>
-              דו״ח אבטחה של Grok
-            </a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="security-card">
-            <div class="security-icon security-icon--green">
-              <i class="bi bi-phone"></i>
-            </div>
-            <h3>נגיש מכל מכשיר</h3>
-            <p>רק התנועות עוברות לאפליקציה — בלי סיסמאות, בלי פרטי התחברות. נכנסים מכל מכשיר ורואים הכל מעודכן.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container text-center">
-      <div class="cta-card">
-        <img src="images/logo.svg" alt="" width="80" height="80" class="mb-4">
-        <h2>רוצים לנסות?</h2>
-        <p class="cta-text">מתחילים ישירות בדפדפן — או מורידים את התוכנה לסנכרון אוטומטי מהבנקים.</p>
-        <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
-          <a href="https://moneym.base44.app/" class="btn btn-light btn-lg rounded-pill px-5" target="_blank" rel="noopener">
-            <i class="bi bi-cursor ms-2"></i>
-            כניסה לאפליקציה
-          </a>
-          <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe" class="btn btn-outline-light btn-lg rounded-pill px-4">
-            <i class="bi bi-download ms-2"></i>
-            הורדה למחשב
-          </a>
-        </div>
-        <p class="cta-note mt-3">חינם &bull; קוד פתוח &bull; תוכנה דורשת Windows</p>
       </div>
     </div>
   </section>
@@ -478,7 +516,7 @@
       <div class="row g-4 align-items-center">
         <div class="col-md-4">
           <div class="d-flex align-items-center gap-2">
-            <img src="images/logo.svg" alt="" width="28" height="28">
+            <img src="images/logo.svg" alt="לוגו MoneyMoney" width="28" height="28" loading="lazy">
             <span class="footer-brand">MoneyMoney</span>
           </div>
           <p class="footer-text mt-2">פרויקט אישי. בניתי את זה כי הייתי צריך את זה.</p>
@@ -486,10 +524,16 @@
         <div class="col-md-4 text-center">
           <div class="footer-links">
             <a href="https://moneym.base44.app/" target="_blank" rel="noopener">
-              <i class="bi bi-window"></i> אפליקציה
+              <i class="bi bi-globe2"></i> Web App
             </a>
             <a href="https://github.com/agammyshhay/moneymoney/releases/latest/download/MoneyMoney-Setup.exe">
               <i class="bi bi-download"></i> הורדה
+            </a>
+            <a href="#tab-features" data-tab-target="tab-features-btn">
+              <i class="bi bi-stars"></i> פיצ׳רים
+            </a>
+            <a href="#tab-security" data-tab-target="tab-security-btn">
+              <i class="bi bi-shield-check"></i> אבטחה
             </a>
             <a href="https://github.com/agammyshhay/moneymoney" target="_blank" rel="noopener">
               <i class="bi bi-github"></i> GitHub
@@ -513,6 +557,33 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Kick the screenshots carousel when the Features tab becomes visible
+      var featuresBtn = document.getElementById('tab-features-btn');
+      if (featuresBtn) {
+        featuresBtn.addEventListener('shown.bs.tab', function () {
+          var el = document.getElementById('screenshotsCarousel');
+          if (!el || !window.bootstrap) return;
+          var inst = bootstrap.Carousel.getInstance(el) || new bootstrap.Carousel(el, { interval: 3500 });
+          inst.cycle();
+        });
+      }
+
+      // External links (navbar, security CTA) can activate a tab via data-tab-target="<btn-id>"
+      document.querySelectorAll('[data-tab-target]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var btn = document.getElementById(link.getAttribute('data-tab-target'));
+          if (!btn || !window.bootstrap) return;
+          e.preventDefault();
+          bootstrap.Tab.getOrCreateInstance(btn).show();
+          var anchor = document.getElementById('content');
+          if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
+  </script>
 
   <!-- Vercel Analytics -->
   <script defer src="/_vercel/insights/script.js"></script>
