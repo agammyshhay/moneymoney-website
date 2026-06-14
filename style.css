@@ -93,29 +93,60 @@ body {
   color: var(--primary);
 }
 
-.btn-android-nav {
-  position: relative;
+.nav-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  padding: 0.32rem 0.85rem;
+  padding: 0.4rem 0.95rem;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #1b5e20;
-  background: #e8f5e9;
-  border: 1px solid #a5d6a7;
+  line-height: 1.4;
   border-radius: 999px;
+  border: 1px solid transparent;
   text-decoration: none;
-  transition: all 0.2s ease;
   white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.btn-android-nav i {
+.nav-cta i {
   font-size: 1rem;
+  line-height: 1;
+}
+
+.nav-cta--web {
+  background: #fff;
+  color: var(--primary);
+  border-color: #bcd5f5;
+}
+
+.nav-cta--web:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.nav-cta--windows {
+  background: var(--primary);
+  color: #fff;
+}
+
+.nav-cta--windows:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.nav-cta--android {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border-color: #a5d6a7;
+}
+
+.nav-cta--android i {
   color: #34a853;
 }
 
-.btn-android-nav:hover {
+.nav-cta--android:hover {
   background: #c8e6c9;
   border-color: #81c784;
   color: #0d3b14;
